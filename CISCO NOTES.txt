@@ -1,0 +1,28 @@
+
+R1
+
+enable
+configure terminal
+interface g0/0
+ip address 192.168.100.1 255.255.255.224
+no shutdown
+interface g0/1
+ip address 192.168.100.66 255.255.255.224
+no shutdown
+end
+
+S3
+
+enable
+configure terminal
+interface Vlan1
+ip address 192.168.100.66 255.255.255.224
+no shutdown
+ip default-gateway 192.168.100.65
+end
+
+PC4
+
+192.168.100.126
+255.255.255.224
+192.168.100.97
